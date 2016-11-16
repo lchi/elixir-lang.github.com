@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: lchi-elixir-lang-demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: elixir-lang-demo
+        language: ruby
+        env: demo
+    spec:
+      containers:
+      - name: elixir-lang
+        image: lchi/elixir-lang-demo:0
